@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
+import { createContext, useState } from 'react';
 import './App.css';
+import Footer from './Component/Footer';
+
+import Navbar from './Component/Navbar';
+
+export const myContext = createContext()
 
 function App() {
+
+  const [login, setLogin] = useState(false)
+  const [symbol, setSymbol] = useState("$")
+
+
+  console.log(login)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <myContext.Provider value={{login:login, setLogin:setLogin , symbol:symbol, setSymbol:setSymbol}}>
+      <div className='bg-slate-100'>
+
+        <Navbar />
+        <Footer />
+
+
+      </div>
+    </myContext.Provider>
+
   );
 }
 
