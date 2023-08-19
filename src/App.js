@@ -2,7 +2,6 @@
 import { createContext, useState } from 'react';
 import './App.css';
 import Footer from './Component/Footer';
-
 import Navbar from './Component/Navbar';
 
 export const myContext = createContext()
@@ -10,19 +9,17 @@ export const myContext = createContext()
 function App() {
 
   const [login, setLogin] = useState(false)
-  const [symbol, setSymbol] = useState("$")
+  const [width, setwidth] = useState(window.innerWidth)
 
-
-  console.log(login)
+//  console.log(login)
 
   return (
 
-    <myContext.Provider value={{login:login, setLogin:setLogin , symbol:symbol, setSymbol:setSymbol}}>
+    <myContext.Provider value={{login, setLogin,width,setwidth }}>
       <div className='bg-slate-100'>
 
         <Navbar />
         <Footer />
-
 
       </div>
     </myContext.Provider>

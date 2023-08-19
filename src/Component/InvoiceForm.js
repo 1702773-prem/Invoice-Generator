@@ -9,12 +9,11 @@ function InvoiceForm() {
   const [symbol, setSymbol] = useState("$")
 
   return (
-    <div className='flex justify-around '>
-
+    <div className=' flex flex-col mx-4   lg:max-3xl:flex-row justify-around  '>    
 
     <AppForm data={symbol}/>
 
-  <Sidebar data={setSymbol}/>
+    <Sidebar data={setSymbol}/>
       
 
     </div>

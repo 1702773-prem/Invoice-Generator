@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { myContext } from '../App'
 import { auth, myDatabase, provider } from '../Firebase.js'
@@ -19,18 +19,23 @@ function SignUp() {
             confirmPassword: ""
         },
 
-        onSubmit: function (values) {
-    
-            myDatabase.collection("userCredentials").add({
+        onSubmit: async function (values) {
+
+           await myDatabase.collection("userCredentials").add({
                 name: values.name,
                 email: values.email,
                 password: values.password,
                 confirmPassword: values.confirmPassword
 
+            }).then(() => {
+                setLogin(true)
+                navigate("/")
             })
-            setLogin(true)
+                .catch((error) => {
+                   alert(error)
+                })
 
-            navigate("/")
+
         },
 
         validationSchema: SignUpSchema
@@ -155,8 +160,6 @@ function SignUp() {
                 <input type="text" required className="block border border-grey-light w-full p-3 rounded mb-4" />
                 <button type='submit'>sub</button>
             </form>
-
-
 
         </div>
     )

@@ -3,7 +3,6 @@ import { myContext } from '../App'
 import { useNavigate } from 'react-router-dom'
 import { auth, myDatabase, provider } from '../Firebase.js'
 import { signInWithPopup } from 'firebase/auth'
-
 import {  useFormik } from 'formik'
 import { SignInSchema } from '../FormValidationSchema.js'
 
@@ -36,21 +35,21 @@ export default function Example() {
           console.log(userData)
   
           if (userData.password === values.password) {
-            //setVerificationResult('Credentials are valid.');
+           
             setLogin(true)
              navigate("/")
               
           } else {
-            // setVerificationResult('Invalid password.');
+            
             alert('Invalid password.')
           }
         } else {
-          // setVerificationResult('User not found.');
+        
           alert('User not found.')
         }
       } catch (error) {
         console.error('Error verifying credentials:', error);
-        //setVerificationResult('Error verifying credentials.');
+        
         alert('Error verifying credentials.')
       }
   
@@ -167,8 +166,6 @@ export default function Example() {
         </div>
 
       </div>
-
-     
 
     </>
   )

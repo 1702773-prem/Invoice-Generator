@@ -1080,7 +1080,8 @@ let currencyObject =
 		currencyArray[++c] = [i,currencyObject[i]]
       
 	}
-	console.log(currencyArray)
+
+	// console.log(currencyArray)
 
 
 export default currencyArray;
