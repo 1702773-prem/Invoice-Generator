@@ -6,7 +6,7 @@ function Footer() {
          <div>
             <h3 className='font-semibold'>USE INVOICE GENERATOR</h3>
             <ul>
-               <a href="../"><li>Invoice Template</li></a>
+               <a href="../Invoice-Generator"><li>Invoice Template</li></a>
                <a href="../help"><li>How to Use</li></a>
             </ul>
          </div>

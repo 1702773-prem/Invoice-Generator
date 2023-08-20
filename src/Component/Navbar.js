@@ -39,7 +39,7 @@ function Navbar() {
                 {context.width > 639 ?
                     (<header className='bg-gray-600 text-white py-3 px-12'>
                         <div className='max-w-6xl mx-auto flex gap-10 items-center'>
-                            <Link to='/'><p className='text-xl'>Invoice Generator</p></Link>
+                            <Link to='/Invoice-Generator'><p className='text-xl'>Invoice Generator</p></Link>
                             <ul className='flex gap-6 items-center'>
                                 <Link to='/help'>
                                     <li>
@@ -120,7 +120,7 @@ function Navbar() {
 
             <Routes>
 
-                <Route path='/' element={<InvoiceForm />} ></Route>
+                <Route path='/Invoice-Generator' element={<InvoiceForm />} ></Route>
                 <Route path='/help' element={<Help />} ></Route>
                 <Route path='/invoiceGuide' element={<InvoiceGuide />} ></Route>
                 <Route path='/signIn' element={<SignIN />} ></Route>
