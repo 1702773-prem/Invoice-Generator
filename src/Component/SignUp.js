@@ -29,7 +29,7 @@ function SignUp() {
 
             }).then(() => {
                 setLogin(true)
-                navigate("/")
+                navigate("/Invoice-Generator")
             })
                 .catch((error) => {
                    alert(error)
@@ -53,7 +53,7 @@ function SignUp() {
 
                 setLogin(true)
 
-                navigate("/")
+                navigate("/Invoice-Generator")
 
             }).catch(function (error) {
                 console.log(error)
@@ -67,7 +67,7 @@ function SignUp() {
                 <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
                     <h1 className="mb-8 text-3xl text-center">Sign up</h1>
 
-                    <form action="">
+                    <form >
                         <div className='mt-2 relative'>
                             <input
                                 type="text"
